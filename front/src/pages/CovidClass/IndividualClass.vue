@@ -15,16 +15,14 @@
               <!-- 标题栏 -->
               <b-row>
                 <b-col>
-                  <div class="d-flex align-items-center">
-                    <div class="mr-5">
-                      <h4>混淆矩阵</h4>
-                      <p>Confusion Matrix</p>
-                    </div>
+                  <div class="mr-5">
+                    <h4>混淆矩阵</h4>
+                    <p>Confusion Matrix</p>
                   </div>
                 </b-col>
               </b-row>
               <b-row>
-                <img :src="confMatrix" width="100%" />
+                <img :src="confMatrix" width="100%" height="auto" />
               </b-row>
             </Widget>
           </b-col>

@@ -37,7 +37,7 @@
         <template slot="button-content">
           <i class='fi flaticon-settings-10 px-2' />
         </template>
-        <b-dropdown-item-button @click="close">
+        <b-dropdown-item-button>
           <i class="fi flaticon-power-1 px-3 mr-3" />
           ? 您有事儿吗
         </b-dropdown-item-button>
