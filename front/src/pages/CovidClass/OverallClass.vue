@@ -203,7 +203,7 @@ export default {
         },
         {
           'name': 'Gaussian Naive Bayes',
-          'key': 'gnb',
+          'key': 'nb',
           'acc': 0.7616580310880829,
           'pcs': 0.7600224012517237,
           'rec': 0.7616580310880829,
