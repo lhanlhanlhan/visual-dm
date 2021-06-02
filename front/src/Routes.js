@@ -5,13 +5,25 @@ import Router from 'vue-router';
 import HomePage from '@/pages/HomePage/HomePage';
 
 // 确诊趋势分析
-import ConfTrendsPage from '@/pages/Trends/ConfTrends/ConfTrends';
+import ConfTrendsPage from '@/pages/Trends/ConfTrends';
 
 // 死亡趋势分析
-import DeadTrendsPage from '@/pages/Trends/DeadTrends/DeadTrends';
+import DeadTrendsPage from '@/pages/Trends/DeadTrends';
 
 // 治愈趋势分析
-import CuredTrendsPage from '@/pages/Trends/CuredTrends/CuredTrends'
+import CuredTrendsPage from '@/pages/Trends/CuredTrends'
+
+//微博热度趋势分析
+import WeiboCountTrendsPage from '@/pages/WeiboTrends/WeiboCountTrends'
+
+//微博发布设备词云图
+import DeviceWordCloudPage from '@/pages/WordClouds/DeviceWordCloud'
+
+//微博文本词云图
+import TextWordCloudPage from '@/pages/WordClouds/TextWordCloud'
+
+//微博情感变化曲线图
+import WeiboSentimentTrendsPage from '@/pages/Sentiment/WeiboSentimentTrends'
 
 // 国内地图
 import DomMapPage from '@/pages/CovidMap/DomesticMap';
@@ -68,6 +80,42 @@ export default new Router({
           path: 'trends/cured-trends',
           name: '治愈趋势分析',
           component: CuredTrendsPage,
+        },
+
+        {  // /app/trends 趋势分析
+          path: 'how',
+          name: '热度趋势',
+          component: ConfTrendsPage,
+        },
+        {  // /app/trends/weiboCount-trends 微博热度趋势分析
+          path: 'how/weibocount-trends',
+          name: '微博热度趋势分析',
+          component:WeiboCountTrendsPage ,
+        },
+        {  // /app/what 热点分析
+          path: 'what',
+          name: '热点分析',
+          component: TextWordCloudPage,
+        },
+        {  // /app/what/text-worcloud 发布设备词云图
+          path: 'what/text-worcloud',
+          name: '微博内容词云图',
+          component:TextWordCloudPage ,
+        },
+        {  // /app/who 热点分析
+          path: 'who',
+          name: '人群画像',
+          component: DeviceWordCloudPage,
+        },
+        {  // /app/wordclouds/device-wordcloud 发布设备词云图
+          path: 'who/device-worcloud',
+          name: '发布设备词云图',
+          component:DeviceWordCloudPage ,
+        },
+        {  // /app/sentiment/weibosentiment-trends 发布设备词云图
+          path: 'sentiment/weibosentiment-trends',
+          name: '微博情感变化分析',
+          component:WeiboSentimentTrendsPage ,
         },
         {  // /app/maps/dom-maps 国内地图
           path: 'maps/dom-maps',

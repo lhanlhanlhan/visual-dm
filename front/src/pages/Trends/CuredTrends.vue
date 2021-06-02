@@ -42,7 +42,7 @@
 import Widget from '@/components/Widget/Widget';
 import { Chart } from 'highcharts-vue';
 import { makeTrend } from '../trends';
-import { fetchOnline } from '../../fetch';
+import { fetchOnline } from '../fetch';
 
 export default {
   components: { Widget, highcharts: Chart },
