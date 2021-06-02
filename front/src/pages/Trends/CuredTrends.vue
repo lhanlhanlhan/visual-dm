@@ -52,7 +52,7 @@ export default {
     }
   },
   mounted: function() {
-    let operation = 'national/numbers/summary?start=2020-01-22&end=2021-01-22';
+    let operation = 'covid/national/numbers/summary?start=2020-01-22&end=2021-01-22';
     let that = this;
     fetchOnline(operation, 
     function(res) {

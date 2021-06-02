@@ -196,7 +196,7 @@ export default {
     },
     fetchProvData: function(prov, successHandler) {
       let province = this.provinces[prov].key;
-      let operation = 'provinces/' + province + '/numbers?start=' + this.startDate + '&end=' + this.endDate;
+      let operation = 'covid/provinces/' + province + '/numbers?start=' + this.startDate + '&end=' + this.endDate;
       fetchOnline(operation, 
       function(res) {
         console.log('正在获取' + province + '数据中')

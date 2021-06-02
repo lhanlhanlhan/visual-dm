@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // 获取地图资讯
 let fetchOnline = function(operation, callback, errHandle) {
-  var url  = "https://api.han-li.cn/" + operation;
+  var url  = "http://localhost:35010/" + operation;
   // 发送请求:将数据返回到一个回到函数中
   // 并且响应成功以后会执行then方法中的回调函数
   axios

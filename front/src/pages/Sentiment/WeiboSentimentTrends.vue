@@ -1,25 +1,37 @@
 <template>
   <div>
     <h1 class="page-title">
-      趋势分析 - <b>确诊</b>
+      <b>讨论“内卷”背后的心态</b>
     </h1>
-    <p>Trends - <b>Confirmed Cases</b></p>
+<!--    <p>Trends - <b>Confirmed Cases</b></p>-->
     <b-row>
       <b-col xs="12" lg="8">
         <Widget
           close collapse
         >
-          <h4>新冠肺炎确诊个案数趋势 (全国)</h4>
-          <p>数据来源：丁香园；时间跨度：22/1/2020 - 22/1/2021</p>
+<!--          <h4>新冠肺炎确诊个案数趋势 (全国)</h4>-->
+          <p>数据来源：微博；时间跨度：22/1/2020 - 22/1/2021</p>
           <highcharts :options="trendData"></highcharts>
         </Widget>
       </b-col>
+
       <b-col xs="12" lg="4">
+        <Widget
+            close collapse
+        >
+                    <h4> 每个阶段的雷达图 </h4>
+          <p>数据来源：微博；时间跨度：22/1/2020 - 22/1/2021</p>
+<!--          <highcharts :options="trendData"></highcharts>-->
+
+        </Widget>
+      </b-col>
+
+      <b-col xs="12" lg="12">
         <Widget
           close collapse
         >
-          <h4>分析 - <b>确诊趋势</b></h4>
-          <p>Analysis - <b>Confirmed Trend</b></p>
+          <h4>分析 - <b>热度趋势</b></h4>
+<!--          <p>Analysis - <b>Confirmed Trend</b></p>-->
           <div class="widget-padding-md w-100 h-100 text-left border rounded">
             <p class="fw-normal">
               可以看到，确诊个案数的两次爆发点分别在
@@ -29,7 +41,7 @@
               这也正是我国疫情在所研究的时间范围内最严重的两次。
             </p>
             <p class="fw-normal">在这两次爆发点只间，也零星分布一些小的爆发。</p>
-            <p>(陈品臻)</p>
+            <p>(张悦)</p>
           </div>
         </Widget>
       </b-col>
@@ -41,7 +53,7 @@
 import Widget from '@/components/Widget/Widget';
 import { Chart } from 'highcharts-vue';
 import { makeTrend } from '../trends';
-import { fetchOnline } from '../fetch';
+import { fetchOnline } from '../fetchlocal';
 
 export default {
   components: { Widget, highcharts: Chart },
@@ -51,7 +63,7 @@ export default {
     }
   },
   mounted: function() {
-    let operation = 'covid/national/numbers/summary?start=2020-01-22&end=2021-01-22';
+    let operation = 'social/sentiments';
     let that = this;
     fetchOnline(operation, 
     function(res) {
@@ -60,10 +72,10 @@ export default {
         let series = [];
         for (let ii in data) {
           let day = data[ii];
-          let dayRecord = [day.datetime, day.confirmed_count];
+          let dayRecord = [day.datetime, day.sentiment];
           series.push(dayRecord);
         }
-        that.trendData = makeTrend(series, "全国确诊个案数", null, "#9DC7F1");
+        that.trendData = makeTrend(series, "情感分析变化曲线图", null, "#9DC7F1");
       }
     },
     function(err) {

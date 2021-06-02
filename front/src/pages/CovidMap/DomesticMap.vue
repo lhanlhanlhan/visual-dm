@@ -127,7 +127,7 @@ export default {
   components: { Widget, highcharts: Chart },
   methods: {
     fetchData: function(successHandler) {
-      let operation = 'national/numbers?start=' + this.startDate + '&end=' + this.endDate;
+      let operation = 'covid/national/numbers?start=' + this.startDate + '&end=' + this.endDate;
       fetchOnline(operation, 
       function(res) {
         console.log('正在获取数据中')

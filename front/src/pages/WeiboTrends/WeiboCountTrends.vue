@@ -1,16 +1,14 @@
 <template>
   <div>
     <h1 class="page-title">
-      趋势分析 - <b>确诊</b>
+      <b>“内卷”到底是怎么火起来的？</b>
     </h1>
-    <p>Trends - <b>Confirmed Cases</b></p>
     <b-row>
       <b-col xs="12" lg="8">
         <Widget
           close collapse
         >
-          <h4>新冠肺炎确诊个案数趋势 (全国)</h4>
-          <p>数据来源：丁香园；时间跨度：22/1/2020 - 22/1/2021</p>
+          <p>数据来源：微博；时间跨度：22/1/2020 - 22/1/2021</p>
           <highcharts :options="trendData"></highcharts>
         </Widget>
       </b-col>
@@ -18,8 +16,8 @@
         <Widget
           close collapse
         >
-          <h4>分析 - <b>确诊趋势</b></h4>
-          <p>Analysis - <b>Confirmed Trend</b></p>
+          <h4>分析 - <b>热度趋势</b></h4>
+<!--          <p>Analysis - <b>Confirmed Trend</b></p>-->
           <div class="widget-padding-md w-100 h-100 text-left border rounded">
             <p class="fw-normal">
               可以看到，确诊个案数的两次爆发点分别在
@@ -29,7 +27,7 @@
               这也正是我国疫情在所研究的时间范围内最严重的两次。
             </p>
             <p class="fw-normal">在这两次爆发点只间，也零星分布一些小的爆发。</p>
-            <p>(陈品臻)</p>
+            <p>(张悦)</p>
           </div>
         </Widget>
       </b-col>
@@ -41,7 +39,7 @@
 import Widget from '@/components/Widget/Widget';
 import { Chart } from 'highcharts-vue';
 import { makeTrend } from '../trends';
-import { fetchOnline } from '../fetch';
+import { fetchOnline } from '../fetchlocal';
 
 export default {
   components: { Widget, highcharts: Chart },
@@ -51,7 +49,7 @@ export default {
     }
   },
   mounted: function() {
-    let operation = 'covid/national/numbers/summary?start=2020-01-22&end=2021-01-22';
+    let operation = 'social/num';
     let that = this;
     fetchOnline(operation, 
     function(res) {
@@ -60,10 +58,10 @@ export default {
         let series = [];
         for (let ii in data) {
           let day = data[ii];
-          let dayRecord = [day.datetime, day.confirmed_count];
+          let dayRecord = [day.datetime, day.num];
           series.push(dayRecord);
         }
-        that.trendData = makeTrend(series, "全国确诊个案数", null, "#9DC7F1");
+        that.trendData = makeTrend(series, "微博热度趋势图", null, "#d84315");
       }
     },
     function(err) {
