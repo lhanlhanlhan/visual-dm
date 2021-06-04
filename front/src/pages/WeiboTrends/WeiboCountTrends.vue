@@ -8,7 +8,7 @@
         <Widget collapse>
           <highcharts :options="trendData" style="height: 300px;"></highcharts>
         </Widget>
-        <Widget close collapse>
+        <Widget collapse>
           <highcharts :options="hotDistChart" style="height: 300px;"></highcharts>
         </Widget>
       </b-col>
