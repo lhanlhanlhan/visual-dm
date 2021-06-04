@@ -26,5 +26,11 @@ public interface SocialMapper {
     @Select("select datetime, num from weibo_num order by `datetime`" )
     List<Map<String, Integer>> getWeiboNum();
 
+    /**
+     * 返回发微博分布时间
+     * @return date，sentiments
+     */
+    @Select("select day_time, frequency from `weibo_time`" )
+    List<Map<String, Integer>> getWeiboTime();
 
 }

@@ -4,20 +4,17 @@
       <b>“内卷”到底是怎么火起来的？</b>
     </h1>
     <b-row>
-      <b-col xs="12" lg="8">
-        <Widget
-          close collapse
-        >
-          <p>数据来源：微博；时间跨度：22/1/2020 - 22/1/2021</p>
-          <highcharts :options="trendData"></highcharts>
+      <b-col xs="12" lg="7">
+        <Widget collapse>
+          <highcharts :options="trendData" style="height: 300px;"></highcharts>
+        </Widget>
+        <Widget close collapse>
+          <highcharts :options="hotDistChart" style="height: 300px;"></highcharts>
         </Widget>
       </b-col>
-      <b-col xs="12" lg="4">
-        <Widget
-          close collapse
-        >
+      <b-col xs="12" lg="5">
+        <Widget collapse>
           <h4>分析 - <b>热度趋势</b></h4>
-<!--          <p>Analysis - <b>Confirmed Trend</b></p>-->
           <div class="widget-padding-md w-100 h-100 text-left border rounded">
             <p class="fw-normal">
               可以看到，确诊个案数的两次爆发点分别在
@@ -39,34 +36,63 @@
 import Widget from '@/components/Widget/Widget';
 import { Chart } from 'highcharts-vue';
 import { makeTrend } from '../trends';
+import { makeBar } from "../bar";
 import { fetchOnline } from '../fetchlocal';
 
 export default {
   components: { Widget, highcharts: Chart },
   data: function() {
     return {
-      trendData: {}
+      trendData: {},
+      hotDistChart: {}
+    }
+  },
+  methods: {
+    makeTrendChart() {
+      let operation = 'social/num';
+      let that = this;
+      fetchOnline(operation, 
+      function(res) {
+        if (res.code === 200) {
+          let data = res.data;
+          let series = [];
+          for (let ii in data) {
+            let day = data[ii];
+            let dayRecord = [day.datetime, day.num];
+            series.push(dayRecord);
+          }
+          that.trendData = makeTrend(series, "微博热度趋势图", null, "#d84315");
+        }
+      },
+      function(err) {
+        console.log('err', err);
+      })
+    },
+    makeTimeDist() {
+      let operation = 'social/time-freq';
+      let that = this;
+      fetchOnline(operation, 
+      function(res) {
+        if (res.code === 200) {
+          let data = res.data;
+          let series = [];
+          let times = [];
+          for (let ii in data) {
+            let day = data[ii];
+            series.push([day.day_time, day.frequency]);
+            times.push(day.day_time);
+          }
+          that.hotDistChart = makeBar(series, "一天内热度分布", '', times, "该时间段内的微博数", "#537385");
+        }
+      },
+      function(err) {
+        console.log('err', err);
+      })
     }
   },
   mounted: function() {
-    let operation = 'social/num';
-    let that = this;
-    fetchOnline(operation, 
-    function(res) {
-      if (res.code === 200) {
-        let data = res.data;
-        let series = [];
-        for (let ii in data) {
-          let day = data[ii];
-          let dayRecord = [day.datetime, day.num];
-          series.push(dayRecord);
-        }
-        that.trendData = makeTrend(series, "微博热度趋势图", null, "#d84315");
-      }
-    },
-    function(err) {
-      console.log('err', err);
-    })
+    this.makeTrendChart();
+    this.makeTimeDist();
   }
 };
 </script>

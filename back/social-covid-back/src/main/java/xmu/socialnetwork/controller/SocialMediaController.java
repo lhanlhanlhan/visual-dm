@@ -39,5 +39,14 @@ public class SocialMediaController {
         return Result.success(data);
     }
 
+    /**
+     * 查询微博日分布频率
+     */
+    @CrossOrigin
+    @GetMapping("time-freq")
+    public Result getTimeFreq() {
+        List<Map<String, Integer>> data = socialMapper.getWeiboTime();
+        return Result.success(data);
+    }
 
 }
