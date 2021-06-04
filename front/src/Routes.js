@@ -85,37 +85,22 @@ export default new Router({
         {  // /app/trends 趋势分析
           path: 'how',
           name: '热度趋势',
-          component: ConfTrendsPage,
+          component: WeiboCountTrendsPage,
         },
-        {  // /app/trends/weiboCount-trends 微博热度趋势分析
-          path: 'how/weibocount-trends',
-          name: '微博热度趋势分析',
-          component:WeiboCountTrendsPage ,
-        },
-        {  // /app/what 热点分析
+        {  // /app/what 热点分析 - 发布设备词云图
           path: 'what',
           name: '热点分析',
           component: TextWordCloudPage,
-        },
-        {  // /app/what/text-worcloud 发布设备词云图
-          path: 'what/text-worcloud',
-          name: '微博内容词云图',
-          component:TextWordCloudPage ,
         },
         {  // /app/who 热点分析
           path: 'who',
           name: '人群画像',
           component: DeviceWordCloudPage,
         },
-        {  // /app/wordclouds/device-wordcloud 发布设备词云图
-          path: 'who/device-worcloud',
-          name: '发布设备词云图',
-          component:DeviceWordCloudPage ,
-        },
-        {  // /app/sentiment/weibosentiment-trends 发布设备词云图
-          path: 'sentiment/weibosentiment-trends',
+        {  // /app/sentiment 发布设备词云图
+          path: 'sentiment',
           name: '微博情感变化分析',
-          component:WeiboSentimentTrendsPage ,
+          component: WeiboSentimentTrendsPage ,
         },
         {  // /app/maps/dom-maps 国内地图
           path: 'maps/dom-maps',

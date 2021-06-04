@@ -12,7 +12,7 @@
         </router-link>
       </header>
       <h5 class="navTitle first">
-        COVID-19 ANALYSIS
+        COVID-19 分析
       </h5>
       <ul class="nav">
         <!-- 趋势分析 -->
@@ -68,11 +68,7 @@
             link='/app/how'
             index="how"
             isHeader
-            :childrenLinks="[
-              { header: '微博数量趋势', iconName:'fa-stethoscope', link: '/app/how/weibocount-trends' },
-            ]"
         />
-
         <NavLink
             :activeItem="activeItem"
             header="热点分析"
@@ -80,12 +76,7 @@
             iconName="fa-globe"
             index="what"
             isHeader
-            :childrenLinks="[
-              { header: '微博文本词云图', iconName:'fa-street-view', link: '/app/what/text-worcloud' },
-              // { header: '各地疫情地图', iconName:'fa-location-arrow ', link: '/app/maps/prov-maps' },
-            ]"
         />
-        <!-- 疫情地图 -->
         <NavLink
             :activeItem="activeItem"
             header="人群画像"
@@ -93,12 +84,7 @@
             iconName="fa-globe"
             index="who"
             isHeader
-            :childrenLinks="[
-              { header: '发布设备', iconName:'fa-street-view', link: '/app/who/device-worcloud' },
-              // { header: '各地疫情地图', iconName:'fa-location-arrow ', link: '/app/maps/prov-maps' },
-            ]"
         />
-        <!-- 分类 -->
         <NavLink
             :activeItem="activeItem"
             header="社会心态"
@@ -106,14 +92,8 @@
             iconName="fa-cubes"
             index="sentiment"
             isHeader
-            :childrenLinks="[
-              { header: '情感变化分析', iconName:'fa-street-view', link: '/app/sentiment/weibosentiment-trends' },
-              // { header: '算法效果视图', iconName:'fa-location-arrow', link: '/app/class/algos' },
-            ]"
         />
       </ul>
-
-
     </nav>
   </div>
 </template>

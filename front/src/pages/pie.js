@@ -1,13 +1,15 @@
-let pieChart = function(data, seriesName) {
+let pieChart = function(data, seriesName, size) {
   let opt = {
     chart: {
       type: 'pie',
-      height: 120
+      height: size
     },
     credits: {
       enabled: false
     },
-    title: false,
+    title: {
+      text:''
+    },
     plotOptions: {
       pie: {
         dataLabels: {
@@ -16,7 +18,7 @@ let pieChart = function(data, seriesName) {
         borderColor: null,
         showInLegend: true,
         innerSize: 60,
-        size: 100,
+        size: size - 10,
         states: {
           hover: {
             halo: {

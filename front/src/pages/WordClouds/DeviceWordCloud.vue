@@ -42,7 +42,7 @@
 <script>
 import Widget from '@/components/Widget/Widget';
 import { Chart } from 'highcharts-vue';
-// import { makeTrend } from '../trends';
+import { makeTrend } from '../trends';
 import { fetchOnline } from '../fetch';
 // 引入词云图需要的包
 import Highcharts from "highcharts/highcharts";
@@ -90,7 +90,7 @@ export default {
             minFontSize: 2,//最小字体
             //点击事件
             events: {
-              click: function(e) {}
+              click: function() {}
             }
           }
         ]

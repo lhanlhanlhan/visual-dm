@@ -155,7 +155,7 @@
 
 <script>
 import Widget from '@/components/Widget/Widget';
-import { pieChart } from './pie';
+import { pieChart } from '../pie';
 // import { getScatter } from './scatter';
 import { Chart } from 'highcharts-vue';
 // ajax
@@ -259,14 +259,14 @@ export default {
         ['Level #5', 46],
         ['Level #6', 158]
       ];
-      this.labelDistPieOption = pieChart(dataArr, "样本数");
+      this.labelDistPieOption = pieChart(dataArr, "样本数", 120);
     },
     drawDatasetDistPie: function() {
       let dataArr = [
         ['Train', 577],
         ['Test', 193],
       ];
-      this.datasetDistPieOption = pieChart(dataArr, "样本数");
+      this.datasetDistPieOption = pieChart(dataArr, "样本数", 120);
     }
   },
   mounted: function() {

@@ -100,8 +100,6 @@
 
 <script>
 import Widget from '@/components/Widget/Widget';
-import { pieChart } from './pie';
-// import { getScatter } from './scatter';
 import { Chart } from 'highcharts-vue';
 // ajax
 
@@ -157,25 +155,6 @@ export default {
     toFourDecimal(number) {
       return String(Math.floor(number * 10000) / 10000)
     },
-    drawLabelDistPie: function() {
-      let dataArr = [
-        ['Level #0', 300],
-        ['Level #1', 275],
-        ['Level #2', 132],
-        ['Level #3', 112],
-        ['Level #4', 50],
-        ['Level #5', 46],
-        ['Level #6', 158]
-      ];
-      this.labelDistPieOption = pieChart(dataArr, "样本数");
-    },
-    drawDatasetDistPie: function() {
-      let dataArr = [
-        ['Train', 8491],
-        ['Test', 2831],
-      ];
-      this.datasetDistPieOption = pieChart(dataArr, "样本数");
-    },
     getData: function(algoKey) {
       this.confMatrix = require('../../assets/figs/' + algoKey + '/cm.svg');
       this.boundGraph = require('../../assets/figs/' + algoKey + '/bound.svg');
@@ -191,29 +170,6 @@ export default {
       this.algoKey = algoKey;
     }
     this.getData(this.algoKey);
-
-    // 直接加载图片好了
-    // this.fetchData(data => {
-    //   // 處理下數據
-    //   let labels = {};
-    //   let labelTypes = [];
-    //   for (let ii in data) {
-    //     let record = data[ii];
-    //     let x = record.pca0;
-    //     let y = record.pca1;
-    //     let lbl = record.level;
-    //     if (labels[lbl] === undefined) {
-    //       labels[lbl] = []
-    //       labelTypes.push(lbl);
-    //     }
-    //     labels[lbl].push([x, y])
-    //   }
-    //   that.overallScatter = getScatter(labels);
-    //   console.log("data:", that.overallScatter)
-    //   console.log('loaded')
-    //   that.ready = true;
-    // })
-    
   }
 };
 </script>

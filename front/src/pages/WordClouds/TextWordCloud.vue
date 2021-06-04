@@ -217,7 +217,7 @@ export default {
             minFontSize: 2,//最小字体
             //点击事件
             events: {
-              click: function(e) {}
+              click: function() {}
             }
           }
         ]
@@ -228,7 +228,7 @@ export default {
   mounted: function() {
     this.getData();
     var data =  [
-      {name: "教育",value: "5329"},
+      {name:"教育",value: "5329"},
       {name:"互联网",value:"1558"},
       {name:"华为",value:"836"},
       {name:"阿里",value:"572"},
