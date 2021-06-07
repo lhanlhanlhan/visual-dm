@@ -7,16 +7,24 @@
     <b-row>
       <b-col xs="12" lg="8">
         <Widget
-          close collapse
+          collapse
         >
-          <h4>新型冠状病毒治愈的个案数趋势 (全国)</h4>
-          <p>数据来源：丁香园；时间跨度：22/1/2020 - 22/1/2021</p>
-          <highcharts :options="trendData"></highcharts>
+          <div class="d-flex align-items-center">
+            <div class="mr-5">
+              <h4>新型冠状病毒治愈的个案数趋势 (全国)</h4>
+              <p>数据来源：丁香园；时间跨度：22/1/2020 - 22/1/2021</p>
+            </div>
+            <!-- 旋转圈 -->
+            <div class="spinner-border" role="status" v-if="!ready">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+          <highcharts v-if="ready" :options="trendData"></highcharts>
         </Widget>
       </b-col>
       <b-col xs="12" lg="4">
         <Widget
-          close collapse
+          collapse
         >
           <h4>分析 - <b>治愈趋势</b></h4>
           <p>Analysis - <b>Cured Trend</b></p>
@@ -48,7 +56,8 @@ export default {
   components: { Widget, highcharts: Chart },
   data: function() {
     return {
-      trendData: {}
+      trendData: {},
+      ready: false
     }
   },
   mounted: function() {
@@ -65,6 +74,7 @@ export default {
           series.push(dayRecord);
         }
         that.trendData = makeTrend(series, "治愈的全国新型冠状病毒引发的肺炎个案数", null, "#05AAA1");
+        that.ready = true;
       }
     },
     function(err) {

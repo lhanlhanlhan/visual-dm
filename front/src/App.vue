@@ -8,8 +8,8 @@ export default {
   created() {
     const currentPath = this.$router.history.current.path;
 
-    if (currentPath === "/" || currentPath === "/app") {
-      this.$router.push("/app/index");
+    if (currentPath === "/" || currentPath === "/portal") {
+      this.$router.push("/portal/index");
     }
   },
 };

@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="page-title">
-      <b>谁在讨论“内卷”</b>
+      <b>谁在讨论「内卷」？</b>
     </h1>
 <!--    <p>Trends - <b>Confirmed Cases</b></p>-->
     <b-row>
@@ -35,13 +35,11 @@
       <b-col xs="12" lg="3">
         <Widget collapse>
           <h4 style="text-align: center"><b>粉丝</b></h4>
-          <p></p>
-          <h5 style="text-align: center"><b>”除了工作之外，我们连追星都在内卷“</b></h5>
+          <h5 style="text-align: center"><b>「除了工作之外，我们连追星都在内卷」</b></h5>
           <div class="widget-padding-md w-100 h-100 text-left border rounded" style="font-size:20px">
             <img :src="persona_fans" width="100%" />
-
           </div>
-          <p>
+          <p class="fw-normal mt-3">
             娱乐圈的内卷，既有内在身份、财富、阶层的多方位卷，而更大一部分原因，是真的有人愿意他们这样“卷”下去，对粉丝而言，我的爱豆榜单遥遥领先，多才多艺，貌美帅气，他们是真正为艺术为世界而生，我是为爱豆而生。
             有人说：“有的时候就感觉自己被道德绑架一样，你喜欢他就必须去支持他的代言或者就要去为他打榜，就有些人就觉得自己是饭圈主导一样，难道我就想开开心心追星不行吗？”
           </p>
@@ -51,14 +49,12 @@
       <b-col xs="12" lg="3">
         <Widget collapse>
           <h4 style="text-align: center"><b>打工人</b></h4>
-          <p></p>
-          <h5 style="text-align: center"><b>”让你加班的不是老板，而是其他愿意加班的人“</b></h5>
-
+          <h5 style="text-align: center"><b>「让你加班的不是老板，而是其他愿意加班的人」</b></h5>
           <div class="widget-padding-md w-100 h-100 text-left border rounded" style="font-size:20px">
             <img :src="persona_996" width="100%" />
           </div>
-          <p></p>
-          <p>  现实生活中，总有响应职场996号召的“劳模”。他们每天熬夜、牺牲周末，通过“疯狂加班”来获得领导的肯定。表面上埋头苦干，实则效率低下。
+          <p class="fw-normal mt-3">
+            现实生活中，总有响应职场996号召的“劳模”。他们每天熬夜、牺牲周末，通过“疯狂加班”来获得领导的肯定。表面上埋头苦干，实则效率低下。
             这些“形式主义奋斗者”打破了原有的工作模式。其他人为了在表现上过得去，也开始加班。久而久之，到了下班点却没有一个人离开，大家都选择“同甘共苦，继续奋战”。
             然而，与自愿加班不同，内卷状态下加班的职场人陷入了低效重复的怪圈。
           </p>
@@ -68,14 +64,11 @@
       <b-col xs="12" lg="3">
         <Widget collapse>
           <h4 style="text-align: center"><b>大学生</b></h4>
-          <p></p>
-
-          <h5 style="text-align: center"><b>”绩点不满3.95不改名“</b></h5>
-
+          <h5 style="text-align: center"><b>「绩点不满3.95不改名」</b></h5>
           <div class="widget-padding-md w-100 h-100 text-left border rounded" style="font-size:20px">
             <img :src="persona_student" width="100%" />
           </div>
-          <p>
+          <p class="fw-normal mt-3">
             大学生内卷最早的出处是几张名校学霸的图片，这些图片最早在清华北大的学霸之间流传。
             图片的内容均是与学习相关，有的人在宿舍床上堆满了书；有的人骑在自行车上看书；有的人甚至边骑车边端着电脑写论文。
             然而，随着社会竞争的加剧，这样的现象也不仅仅只是存在国内的顶尖高校之中，其逐渐演变成为了一种普遍现象。因此，网络上也经常有大学生自嘲：”卷“不动了！
@@ -86,14 +79,11 @@
       <b-col xs="12" lg="3">
         <Widget collapse>
           <h4 style="text-align: center"><b>家长</b></h4>
-          <p></p>
-          <h5 style="text-align: center"><b>“再不学就跟不上了”</b></h5>
-
+          <h5 style="text-align: center"><b>「再不学就跟不上了」</b></h5>
           <div class="widget-padding-md w-100 h-100 text-left border rounded" style="font-size:20px">
             <img :src="persona_parents" width="100%" />
           </div>
-          <p></p>
-          <p>
+          <p class="fw-normal mt-3">
             越来越多的父母们为孩子投入大量时间、精力和金钱，从幼儿园，哦不，从早教起步，便开启了一场漫长而看不到尽头的凡人间的军备赛。
             曾经有一个段子刷爆朋友圈。有网友提问：孩子4岁，英语词汇量只有1500左右，是不是不太够？回答：在美国肯定是够了，在海淀肯定是不够。
           </p>

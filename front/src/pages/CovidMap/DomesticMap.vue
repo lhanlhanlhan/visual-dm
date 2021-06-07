@@ -6,7 +6,7 @@
     <b-row>
       <b-col xs="12" lg="8">
         <Widget
-          close collapse
+          collapse
         >
           <div class="d-flex align-items-center">
             <div class="mr-5">
@@ -91,7 +91,7 @@
       </b-col>
       <b-col xs="12" lg="4">
         <Widget
-          close collapse
+          collapse
         >
           <h4>分析 - <b>确诊病例</b></h4>
           <p>Analysis - <b>Confirmed Count</b></p>

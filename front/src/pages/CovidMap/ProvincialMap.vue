@@ -6,7 +6,7 @@
     <b-row>
       <b-col xs="12" lg="8">
         <Widget
-          close collapse
+          collapse
         >
           <b-row>
             <b-col>
@@ -109,7 +109,7 @@
       </b-col>
       <b-col xs="12" lg="4">
         <Widget
-          close collapse
+          collapse
         >
           <h4>分析 - <b>确诊病例</b></h4>
           <p>Analysis - <b>Confirmed Count</b></p>
@@ -186,7 +186,7 @@ export default {
       this.confirmedProvince = this.choseProvince;
       // 刷新页面
       this.$router.replace({
-        path: "/app/maps/prov-maps",
+        path: "/portal/maps/prov-maps",
         query: { prov: this.confirmedProvince }
       });
     },

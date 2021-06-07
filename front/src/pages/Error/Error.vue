@@ -10,7 +10,7 @@
             ^_^
         </p>
         <b-button class="errorBtn" variant="success"
-         href="#/app/index">
+         href="#/index">
           回到主页
         </b-button>
       </div>

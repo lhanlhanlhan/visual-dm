@@ -7,7 +7,7 @@
         @mouseleave="sidebarMouseLeave"
     >
       <header class="logo">
-        <router-link to="/app/index">
+        <router-link to="/portal/index">
           <span class="primary-word">^_^</span> 
         </router-link>
       </header>
@@ -20,39 +20,39 @@
             :activeItem="activeItem"
             header="趋势分析"
             iconName="fa-line-chart"
-            link='/app/trends'
+            link='/portal/trends'
             index="trends"
             isHeader
             :childrenLinks="[
-              { header: '确诊个案趋势', iconName:'fa-stethoscope', link: '/app/trends/conf-trends' },
-              { header: '治愈个案趋势', iconName:'fa-heartbeat', link: '/app/trends/cured-trends' },
-              { header: '病亡个案趋势', iconName:'fa-ambulance', link: '/app/trends/demise-trends' },
+              { header: '确诊个案趋势', iconName:'fa-stethoscope', link: '/portal/trends/conf-trends' },
+              { header: '治愈个案趋势', iconName:'fa-heartbeat', link: '/portal/trends/cured-trends' },
+              { header: '病亡个案趋势', iconName:'fa-ambulance', link: '/portal/trends/demise-trends' },
             ]"
         />
         <!-- 疫情地图 -->
         <NavLink
             :activeItem="activeItem"
             header="疫情地图"
-            link="/app/maps"
+            link="/portal/maps"
             iconName="fa-globe"
             index="maps"
             isHeader
             :childrenLinks="[
-              { header: '国内疫情地图', iconName:'fa-street-view', link: '/app/maps/dom-maps' },
-              { header: '各地疫情地图', iconName:'fa-location-arrow ', link: '/app/maps/prov-maps' },
+              { header: '国内疫情地图', iconName:'fa-street-view', link: '/portal/maps/dom-maps' },
+              { header: '各地疫情地图', iconName:'fa-location-arrow ', link: '/portal/maps/prov-maps' },
             ]"
         />
         <!-- 分类 -->
         <NavLink
             :activeItem="activeItem"
             header="数据分类"
-            link="/app/class"
+            link="/portal/class"
             iconName="fa-cubes"
             index="class"
             isHeader
             :childrenLinks="[
-              { header: '分类概览', iconName:'fa-street-view', link: '/app/class' },
-              { header: '算法效果视图', iconName:'fa-location-arrow', link: '/app/class/algos' },
+              { header: '分类概览', iconName:'fa-street-view', link: '/portal/class' },
+              { header: '算法效果视图', iconName:'fa-location-arrow', link: '/portal/class/algos' },
             ]"
         />
       </ul>
@@ -65,14 +65,14 @@
             :activeItem="activeItem"
             header="热度趋势"
             iconName="fa-line-chart"
-            link='/app/how'
+            link='/portal/how'
             index="how"
             isHeader
         />
         <NavLink
             :activeItem="activeItem"
             header="热点分析"
-            link="/app/what"
+            link="/portal/what"
             iconName="fa-globe"
             index="what"
             isHeader
@@ -80,7 +80,7 @@
         <NavLink
             :activeItem="activeItem"
             header="人群画像"
-            link="/app/who"
+            link="/portal/who"
             iconName="fa-globe"
             index="who"
             isHeader
@@ -88,7 +88,7 @@
         <NavLink
             :activeItem="activeItem"
             header="社会心态"
-            link="/app/sentiment"
+            link="/portal/sentiment"
             iconName="fa-cubes"
             index="sentiment"
             isHeader
