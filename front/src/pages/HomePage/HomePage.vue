@@ -7,14 +7,19 @@
           <h4>有关此项目</h4>
           <p>About This Project</p>
           <div class="">
-            <p class="fw-normal">
-              更新时间：2021 年 6 月 7 日
+            <!-- 更新时间 -->
+            <b-badge variant="success" class="text-white"> 更新时间 </b-badge>
+            <p class="fw-normal mt-2">
+              2021 年 6 月 7 日
             </p>
-            <p class="fw-normal">
+            <!-- 介绍 -->
+            <b-badge variant="primary" class="text-white"> 项目介绍 </b-badge>
+            <p class="fw-normal mt-2">
               Visual DM (Visual Data Mining)
               是本组《社交网络技术与应用》课程设计的前端可视化系统，
               是本组为在课程设计中产生的数据分析所制作的所有可视页面的门户网站。
             </p>
+            <!-- 免责 -->
             <b-badge variant="warning" class="text-white"> 免责声明 </b-badge>
             <p class="fw-normal mt-2">
               本系统展现的任何数据及其任何分析文本乃对数据的客观反应和/或评价，

@@ -30,13 +30,13 @@
           <p>Analysis - <b>Cured Trend</b></p>
           <div class="widget-padding-md w-100 h-100 text-left border rounded">
             <p class="fw-normal">
-              在<mark><strong>第一次</strong></mark>疫情爆发后的一个月，有大量治愈的个案，
+              在<mark><strong>第一次</strong></mark>疫情爆发后的 1~2 个月，增加了大量治愈的个案数，
               <mark><strong>治愈人数激增的时间和确诊人数激增的时间相差一个月左右</strong></mark>。
             </p>
             <p class="fw-normal">
-              而在<mark><strong>第二次</strong></mark>疫情爆发的时间（2021年1月），
+              而在<mark><strong>第二次（2020年7-8月）、第三次（2021年1月）疫情爆发</strong></mark>的时候，
               治愈人数在确诊人数爆发的<mark><strong>同时显著增长</strong></mark>，
-              这说明医疗技术的进步使得更多的确诊人员得到及时的治疗，及时治愈。
+              这说明医疗技术的进步使得更多的确诊人员得到及时的治疗，被及时治愈。
             </p>
             <p>(陈品臻)</p>
           </div>

@@ -15,7 +15,7 @@
       },
       tree() {
         let pageName = {
-          'app': '功能',
+          'portal': '功能',
           'index': '主页',
           'trends': '趋势分析',
           'conf-trends': '确诊趋势分析',

@@ -30,13 +30,21 @@
           <p>Analysis - <b>Confirmed Trend</b></p>
           <div class="widget-padding-md w-100 h-100 text-left border rounded">
             <p class="fw-normal">
-              可以看到，确诊个案数的两次爆发点分别在
-              <mark><strong>2020年1月-2月期间</strong></mark>，
-              以及
-              <mark><strong>2021年1月左右</strong></mark>，
-              这也正是我国疫情在所研究的时间范围内最严重的两次。
+              可以看到，确诊人数的第一次爆发点在 <mark><strong>2020年2月-3月期间</strong></mark>，
+              在这个时间段内，累计确诊人数由0激增到了8万，
+              随后进入确诊人数平稳期，人数上升到 <mark><strong>8.5万</strong></mark>。
+              <mark><strong>2020年2月13日当天</strong></mark>
+              ，确诊人数更是增加超过1万人。
             </p>
-            <p class="fw-normal">在这两次爆发点只间，也零星分布一些小的爆发。</p>
+            <p class="fw-normal">
+              在此之后的相当长的一段时间内，由于我国<mark><strong>疫情控制良好</strong></mark>，
+              确诊人数仅在部分时候有零星增加，总体趋势平稳发展。
+            </p>
+            <p class="fw-normal">
+              在
+              <mark><strong>2020年7月到8月</strong></mark>，
+              我国新疆地区迎来一次新的爆发期，因此确诊人数有小幅提升。
+            </p>
             <p>(陈品臻)</p>
           </div>
         </Widget>

@@ -64,7 +64,7 @@
         <NavLink
             :activeItem="activeItem"
             header="热度趋势"
-            iconName="fa-line-chart"
+            iconName="fa-external-link-square"
             link='/portal/how'
             index="how"
             isHeader
@@ -73,7 +73,7 @@
             :activeItem="activeItem"
             header="热点分析"
             link="/portal/what"
-            iconName="fa-globe"
+            iconName="fa-certificate"
             index="what"
             isHeader
         />
@@ -81,7 +81,7 @@
             :activeItem="activeItem"
             header="人群画像"
             link="/portal/who"
-            iconName="fa-globe"
+            iconName="fa-users"
             index="who"
             isHeader
         />
@@ -89,7 +89,7 @@
             :activeItem="activeItem"
             header="社会心态"
             link="/portal/sentiment"
-            iconName="fa-cubes"
+            iconName="fa-comments"
             index="sentiment"
             isHeader
         />

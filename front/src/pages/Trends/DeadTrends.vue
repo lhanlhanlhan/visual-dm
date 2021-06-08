@@ -26,21 +26,28 @@
         <Widget
           collapse
         >
-          <h4>分析 - <b>死亡趋势</b></h4>
+          <h4>分析 - <b>病亡人数趋势</b></h4>
           <p>Analysis - <b>Demised Trend</b></p>
           <div class="widget-padding-md w-100 h-100 text-left border rounded">
             <p class="fw-normal">
-              在<mark><strong>第一次疫情爆发后一个月</strong></mark>，
-              死亡个案数达到最高峰，
-              这是中国疫情最严重的一个月，也是最难熬的一个月；
+              在<mark><strong>第一次疫情爆发后一个月 (2020年3月-4月)</strong></mark>，
+              死亡个案数达到最高峰，这是中国疫情最严重的一个月，也是最难熬的一个月；
             </p>
             <p class="fw-normal">
               而在
-              <mark><strong>下一次疫情爆发的时候（2021年1月）</strong></mark>，
-              死亡人数虽然有激增，但是数据较为温和，其
+              <mark><strong>下一次疫情爆发的时候（2021年7月、2021年1月）</strong></mark>，
+              死亡人数虽然有激增，但是数据温和得多，其
               <mark><strong>最高点比第一次大幅降低</strong></mark>，
               且死亡人数在比例上呈递减趋势。
             </p>
+            <p class="fw-normal">
+              我们通过分析还得知，
+              人数在全体人数比例在<mark><strong>2020年4月17日</strong></mark>达到顶峰，随后一直呈递减趋势：
+            </p>
+            <img 
+               :src="require('../../assets/figs/dead-rate.png')" 
+               width="100%" 
+               class="mt-2"/>
             <p>(陈品臻)</p>
           </div>
         </Widget>
