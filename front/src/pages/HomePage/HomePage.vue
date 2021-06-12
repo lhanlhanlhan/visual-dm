@@ -10,7 +10,7 @@
             <!-- 更新时间 -->
             <b-badge variant="success" class="text-white"> 更新时间 </b-badge>
             <p class="fw-normal mt-2">
-              2021 年 6 月 7 日
+              2021 年 6 月 8 日
             </p>
             <!-- 介绍 -->
             <b-badge variant="primary" class="text-white"> 项目介绍 </b-badge>

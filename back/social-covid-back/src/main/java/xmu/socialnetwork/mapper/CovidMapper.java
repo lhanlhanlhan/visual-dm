@@ -31,7 +31,9 @@ public interface CovidMapper {
     /**
      * 查询全国疫情汇总数据【范围】
      */
-    @Select("select * from covid_summary t WHERE t.`datetime` >= #{start} AND t.`datetime` <= #{end} order by `datetime`")
+    @Select("select * from covid_summary t " +
+            "WHERE t.`datetime` >= #{start} " +
+            "AND t.`datetime` <= #{end} order by `datetime`")
     List<Map<String,Object>> getNationalDataTimeSeries(String start, String end);
 
     /**
@@ -52,7 +54,10 @@ public interface CovidMapper {
      * 查询全国各个省份某日的数据【范围】
      * @return 省份名称，确诊数，疑似数，治愈数，死亡数，时间
      */
-    @Select("select * from covid_short t WHERE t.`datetime` >= #{start} AND t.`datetime` <= #{end} order by `datetime`")
+    @Select("select * from covid_short t " +
+            "WHERE t.`datetime` >= #{start} " +
+            "AND t.`datetime` <= #{end} " +
+            "order by `datetime`")
     List<Map<String, Object>> getProvincialDataTimeSeries(String start, String end);
 
     /**

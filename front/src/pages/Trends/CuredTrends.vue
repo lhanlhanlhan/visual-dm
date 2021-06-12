@@ -28,7 +28,7 @@
         >
           <h4>分析 - <b>治愈趋势</b></h4>
           <p>Analysis - <b>Cured Trend</b></p>
-          <div class="widget-padding-md w-100 h-100 text-left border rounded">
+          <div class="">
             <p class="fw-normal">
               在<mark><strong>第一次</strong></mark>疫情爆发后的 1~2 个月，增加了大量治愈的个案数，
               <mark><strong>治愈人数激增的时间和确诊人数激增的时间相差一个月左右</strong></mark>。
@@ -39,6 +39,14 @@
               这说明医疗技术的进步使得更多的确诊人员得到及时的治疗，被及时治愈。
             </p>
             <p>(陈品臻)</p>
+
+            <p class="fw-normal">
+              在<mark><strong>2月20日到23日</strong></mark>之间，治愈病例数基本成阶梯式上升，
+              随后治愈病例数逐渐上升。
+              治愈人数激增的时间和确诊人数激增的时间相差<mark><strong>一个月左右</strong></mark>。
+              治愈病例数曲线在<mark><strong>4月初逐步平缓</strong></mark>，疫情逐步稳定。
+            </p>
+            <p>(单晓妍)</p>
           </div>
         </Widget>
       </b-col>

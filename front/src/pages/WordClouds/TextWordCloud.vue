@@ -134,14 +134,6 @@
               但如果一件事情有<strong>价值</strong>，有<strong>意义</strong>，能对<strong>世界</strong>有哪怕是一点微弱的<strong>影响</strong>，或许是你在某个内卷<strong>专业</strong>或者
               <strong>行业</strong> 坚持下去的更持久的动力
             </p>
-
-            <p>
-              3.<strong> 生活</strong
-              >、<strong>目标</strong>与<strong>人生</strong>: To Write
-            </p>
-
-            <p>4.<strong> 奋斗 </strong>与<strong>努力</strong>: To Write</p>
-
             <p align="right">By 张悦</p>
           </div>
         </Widget>

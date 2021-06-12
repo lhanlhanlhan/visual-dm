@@ -111,18 +111,27 @@
         <Widget
           collapse
         >
-          <h4>分析 - <b>确诊病例</b></h4>
-          <p>Analysis - <b>Confirmed Count</b></p>
-          <div class="widget-padding-md w-100 h-100 text-left border rounded">
+          <h4>分析 - <b>疫情地图</b></h4>
+          <p>Analysis - <b>Domestic Pandemic Map</b></p>
+          <div class="">
             <p class="fw-normal">
-              可以看到，确诊人数的两次爆发点分别在
-              <mark><strong>2020年1月-2月期间</strong></mark>，
-              以及
-              <mark><strong>2021年1月左右</strong></mark>，
-              这也正是我国疫情在所研究的时间范围内最严重的两次。
+              疫情主要以武汉为中心向周围扩散，主要爆发点在我国中部和东南沿海片区，
+              又通过人口流动将病情传播至一线城市，北上广等成为二级传播中心。<br />
+              此次疫情具有明显的地域特征：
+              <mark><strong>距离湖北越近，经济越发达，交通越发达，人口越多，越严重</strong></mark>。
+              在疫情初期，湖北省疫情增长速度快，其他省份增长速度较平缓。
             </p>
-            <p class="fw-normal">在这两次爆发点只间，也零星分布一些小的爆发。</p>
-            <p>(陈品臻)</p>
+            <p class="fw-normal">
+              1月24日，全国23个省份出现新冠病毒确诊病例，
+              <mark><strong>武汉封城</strong></mark>，
+              <mark><strong>核酸检测试剂盒开始量产</strong></mark>。<br />
+              2月12日湖北地区新增病例异常升高，原因是
+              <mark><strong>湖北地区更改诊断标准</strong></mark>，使得确诊更加容易。<br />
+              3月初，政府采取有力措施，
+              <mark><strong>疫情拐点出现</strong></mark>。<br />
+              此后，湖北地区和全国地区新增数据的趋势一致。疫情具有放缓的态势。
+            </p>
+            <p>(单晓妍)</p>
           </div>
         </Widget>
       </b-col>

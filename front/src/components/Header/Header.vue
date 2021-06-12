@@ -28,7 +28,7 @@
     <a class="navbarBrand d-md-none">
       <i class="fa fa-circle text-danger" />
       &nbsp;
-      ^_^ 您居然还用手机看啊
+      ^_^
       &nbsp;
       <i class="fa fa-circle text-primary" />
     </a>
